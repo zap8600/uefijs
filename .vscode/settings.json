@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "uefi.h": "c",
+        "duktape.h": "c",
+        "stdint.h": "c"
+    }
+}

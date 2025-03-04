@@ -191,7 +191,7 @@
  * are processed before architectures, so this happens before the
  * DUK_F_X86/DUK_F_X64 detection is emitted.
  */
-#include <sys/isa_defs.h>
+//#include <sys/isa_defs.h>
 #endif
 #endif
 
@@ -404,11 +404,11 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <TargetConditionals.h>
-#include <architecture/byte_order.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <TargetConditionals.h>
+//#include <architecture/byte_order.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 /* http://stackoverflow.com/questions/5919996/how-to-detect-reliably-mac-os-x-ios-linux-windows-in-c-preprocessor */
 #if TARGET_IPHONE_SIMULATOR
@@ -432,11 +432,11 @@
 #define DUK_USE_DATE_TZO_GMTIME_S
 /* no parsing (not an error) */
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/types.h>
-#include <machine/endian.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/types.h>
+//#include <machine/endian.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING  "orbis"
 #elif defined(DUK_F_OPENBSD)
@@ -446,11 +446,11 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/types.h>
-#include <sys/endian.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/types.h>
+//#include <sys/endian.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING  "openbsd"
 #elif defined(DUK_F_BSD)
@@ -459,11 +459,11 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/types.h>
-#include <sys/endian.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/types.h>
+//#include <sys/endian.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING  "bsd"
 #elif defined(DUK_F_TOS)
@@ -472,7 +472,7 @@
 #define DUK_USE_DATE_TZO_GMTIME
 /* no parsing (not an error) */
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING  "tos"
 
@@ -488,13 +488,13 @@
 #define DUK_USE_DATE_TZO_GMTIME
 /* no parsing (not an error) */
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <time.h>
+//#include <time.h>
 #elif defined(DUK_F_PPC)
 #define DUK_USE_DATE_NOW_GETTIMEOFDAY
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <time.h>
+//#include <time.h>
 #if !defined(UINTPTR_MAX)
 #define UINTPTR_MAX UINT_MAX
 #endif
@@ -534,7 +534,7 @@
 /* Only include when compiling Duktape to avoid polluting application build
  * with a lot of unnecessary defines.
  */
-#include <windows.h>
+//#include <windows.h>
 #endif
 
 #define DUK_USE_OS_STRING "durango"
@@ -564,7 +564,7 @@
 /* Only include when compiling Duktape to avoid polluting application build
  * with a lot of unnecessary defines.
  */
-#include <windows.h>
+//#include <windows.h>
 #endif
 
 /* GetSystemTimePreciseAsFileTime() available from Windows 8:
@@ -609,10 +609,10 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <endian.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <endian.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "flashplayer"
 
@@ -631,10 +631,10 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/types.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/types.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "qnx"
 #elif defined(DUK_F_TINSPIRE)
@@ -647,10 +647,10 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/types.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/types.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "tinspire"
 #elif defined(DUK_F_EMSCRIPTEN)
@@ -667,16 +667,16 @@
 #endif
 #endif  /* DUK_COMPILING_DUKTAPE */
 
-#include <sys/types.h>
+//#include <sys/types.h>
 #if defined(DUK_F_BCC)
 /* no endian.h */
 #else
-#include <endian.h>
+//#include <endian.h>
 #endif  /* DUK_F_BCC */
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
-#include <stdint.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
+#include <uefi.h>
 
 #define DUK_USE_DATE_NOW_GETTIMEOFDAY
 #define DUK_USE_DATE_TZO_GMTIME_R
@@ -698,16 +698,16 @@
 #endif
 #endif  /* DUK_COMPILING_DUKTAPE */
 
-#include <sys/types.h>
+//#include <sys/types.h>
 #if defined(DUK_F_BCC)
 /* no endian.h or stdint.h */
 #else
-#include <endian.h>
-#include <stdint.h>
+//#include <endian.h>
+#include <uefi.h>
 #endif  /* DUK_F_BCC */
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_DATE_NOW_GETTIMEOFDAY
 #define DUK_USE_DATE_TZO_GMTIME_R
@@ -733,16 +733,16 @@
 #endif
 #endif  /* DUK_COMPILING_DUKTAPE */
 
-#include <sys/types.h>
+//#include <sys/types.h>
 #if defined(DUK_F_BCC)
 /* no endian.h or stdint.h */
 #else
-#include <endian.h>
-#include <stdint.h>
+//#include <endian.h>
+#include <uefi.h>
 #endif  /* DUK_F_BCC */
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_DATE_NOW_GETTIMEOFDAY
 #define DUK_USE_DATE_TZO_GMTIME_R
@@ -761,7 +761,7 @@
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
 
-#include <sys/types.h>
+//#include <sys/types.h>
 #if defined(DUK_F_OLD_SOLARIS)
 /* Old Solaris with no endian.h, stdint.h */
 #define DUK_F_NO_STDINT_H
@@ -769,12 +769,12 @@
 #define DUK_USE_BYTEORDER 3
 #endif
 #else  /* DUK_F_OLD_SOLARIS */
-#include <sys/param.h>
+//#include <sys/param.h>
 #endif  /* DUK_F_OLD_SOLARIS */
 
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "solaris"
 #elif defined(DUK_F_AIX)
@@ -786,9 +786,9 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "aix"
 #elif defined(DUK_F_HPUX)
@@ -801,9 +801,9 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "hpux"
 #elif defined(DUK_F_POSIX)
@@ -812,11 +812,11 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/types.h>
-#include <endian.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/types.h>
+//#include <endian.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "posix"
 #elif defined(DUK_F_CYGWIN)
@@ -825,11 +825,11 @@
 #define DUK_USE_DATE_NOW_GETTIMEOFDAY
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <sys/types.h>
-#include <endian.h>
-#include <sys/param.h>
-#include <sys/time.h>
-#include <time.h>
+//#include <sys/types.h>
+//#include <endian.h>
+//#include <sys/param.h>
+//#include <sys/time.h>
+//#include <time.h>
 
 #define DUK_JMPBUF_TYPE       jmp_buf
 #define DUK_SETJMP(jb)        _setjmp((jb))
@@ -842,8 +842,8 @@
 #define DUK_USE_DATE_TZO_GMTIME_R
 #define DUK_USE_DATE_PRS_STRPTIME
 #define DUK_USE_DATE_FMT_STRFTIME
-#include <time.h>
-#include <sys/time.h>
+//#include <time.h>
+//#include <sys/time.h>
 #define DUK_USE_OS_STRING "unknown"
 #else
 /* --- Generic fallback --- */
@@ -862,17 +862,17 @@
 #undef DUK_USE_DATE_FMT_STRFTIME
 
 /* Rely on C89 headers only; time.h must be here. */
-#include <time.h>
+//#include <time.h>
 
 #define DUK_USE_OS_STRING "unknown"
 #endif  /* autodetect platform */
 
 /* Shared includes: C89 */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdarg.h>  /* varargs */
-#include <setjmp.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//#include <stdarg.h>  /* varargs */
+//#include <setjmp.h>
 #include <stddef.h>  /* e.g. ptrdiff_t */
 #include <math.h>
 #include <limits.h>
@@ -887,7 +887,7 @@
  * __STDC_LIMIT_MACROS and __STDC_CONSTANT_MACROS must be defined before
  * including stdint.h (see above).
  */
-#include <stdint.h>
+#include <uefi.h>
 #endif
 
 /* <exception> is only included if needed, based on DUK_USE_xxx flags. */
@@ -1651,7 +1651,7 @@
 /* C99 or compatible */
 
 #define DUK_F_HAVE_64BIT
-#include <inttypes.h>
+//#include <inttypes.h>
 
 typedef uint8_t duk_uint8_t;
 typedef int8_t duk_int8_t;
@@ -1661,26 +1661,26 @@ typedef uint32_t duk_uint32_t;
 typedef int32_t duk_int32_t;
 typedef uint64_t duk_uint64_t;
 typedef int64_t duk_int64_t;
-typedef uint_least8_t duk_uint_least8_t;
-typedef int_least8_t duk_int_least8_t;
-typedef uint_least16_t duk_uint_least16_t;
-typedef int_least16_t duk_int_least16_t;
-typedef uint_least32_t duk_uint_least32_t;
-typedef int_least32_t duk_int_least32_t;
-typedef uint_least64_t duk_uint_least64_t;
-typedef int_least64_t duk_int_least64_t;
-typedef uint_fast8_t duk_uint_fast8_t;
-typedef int_fast8_t duk_int_fast8_t;
-typedef uint_fast16_t duk_uint_fast16_t;
-typedef int_fast16_t duk_int_fast16_t;
-typedef uint_fast32_t duk_uint_fast32_t;
-typedef int_fast32_t duk_int_fast32_t;
-typedef uint_fast64_t duk_uint_fast64_t;
-typedef int_fast64_t duk_int_fast64_t;
+typedef uint8_t duk_uint_least8_t;
+typedef int8_t duk_int_least8_t;
+typedef uint16_t duk_uint_least16_t;
+typedef int16_t duk_int_least16_t;
+typedef uint32_t duk_uint_least32_t;
+typedef int32_t duk_int_least32_t;
+typedef uint64_t duk_uint_least64_t;
+typedef int64_t duk_int_least64_t;
+typedef uint8_t duk_uint_fast8_t;
+typedef int8_t duk_int_fast8_t;
+typedef uint16_t duk_uint_fast16_t;
+typedef int16_t duk_int_fast16_t;
+typedef uint32_t duk_uint_fast32_t;
+typedef int32_t duk_int_fast32_t;
+typedef uint64_t duk_uint_fast64_t;
+typedef int64_t duk_int_fast64_t;
 typedef uintptr_t duk_uintptr_t;
-typedef intptr_t duk_intptr_t;
-typedef uintmax_t duk_uintmax_t;
-typedef intmax_t duk_intmax_t;
+typedef long duk_intptr_t;
+typedef unsigned long duk_uintmax_t;
+typedef long duk_intmax_t;
 
 #define DUK_UINT8_MIN         0
 #define DUK_UINT8_MAX         UINT8_MAX
@@ -1707,9 +1707,9 @@ typedef intmax_t duk_intmax_t;
 #define DUK_INT_FAST16_MIN    INT_FAST16_MIN
 #define DUK_INT_FAST16_MAX    INT_FAST16_MAX
 #define DUK_UINT32_MIN        0
-#define DUK_UINT32_MAX        UINT32_MAX
-#define DUK_INT32_MIN         INT32_MIN
-#define DUK_INT32_MAX         INT32_MAX
+#define DUK_UINT32_MAX        0xffffffffUL
+#define DUK_INT32_MIN         (-0x7fffffffL - 1L)
+#define DUK_INT32_MAX         0x7fffffffL
 #define DUK_UINT_LEAST32_MIN  0
 #define DUK_UINT_LEAST32_MAX  UINT_LEAST32_MAX
 #define DUK_INT_LEAST32_MIN   INT_LEAST32_MIN
@@ -1742,7 +1742,7 @@ typedef intmax_t duk_intmax_t;
 #define DUK_INTMAX_MAX        INTMAX_MAX
 
 #define DUK_SIZE_MIN          0
-#define DUK_SIZE_MAX          SIZE_MAX
+#define DUK_SIZE_MAX          18446744073709551615UL
 #undef DUK_SIZE_MAX_COMPUTED
 
 #else  /* C99 types */
@@ -3091,7 +3091,7 @@ typedef struct duk_hthread duk_context;
 
 /*
  *  You may add overriding #define/#undef directives below for
- *  customization.  You of course cannot un-#include or un-typedef
+ *  customization.  You of course cannot un-//#include or un-typedef
  *  anything; these require direct changes above.
  */
 
@@ -3102,8 +3102,8 @@ typedef struct duk_hthread duk_context;
  */
 
 #if defined(DUK_F_CPP) && defined(DUK_USE_CPP_EXCEPTIONS)
-#include <exception>  /* std::exception */
-#include <stdexcept>  /* std::runtime_error */
+//#include <exception>  /* std::exception */
+//#include <stdexcept>  /* std::runtime_error */
 #endif
 
 /*

@@ -1,5 +1,8 @@
-#include <uefi.h>
+//#include <uefi.h>
+#include <stdint.h>
 #include "duktape.h"
+
+
 
 int main(int argc, char *argv[]) {
   duk_context *ctx = duk_create_heap_default();
